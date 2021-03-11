@@ -1,22 +1,22 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import MySwiper from "../components/swiper/swiper"
-import SampleForm from "../components/form/form"
-import { LazyLoadImage } from "react-lazy-load-image-component"
-import "react-lazy-load-image-component/src/effects/blur.css"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import MySwiper from "../components/swiper/swiper";
+import SampleForm from "../components/form/form";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 class IndexPage extends React.Component {
   render() {
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const siteDescription = this.props.data.site.siteMetadata.description
+    const siteTitle = this.props.data.site.siteMetadata.title;
+    const siteDescription = this.props.data.site.siteMetadata.description;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={siteTitle} description={siteDescription} />
         <div>
-          <p>This is the homepage</p>
+          <p>My homepage</p>
           <Link to="/blog">Go to Blog</Link>
           <br />
           <br />
@@ -156,11 +156,11 @@ class IndexPage extends React.Component {
           </SampleForm>
         </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default IndexPage
+export default IndexPage;
 
 export const indexPageQuery = graphql`
   query indexPageQuery {
@@ -172,4 +172,4 @@ export const indexPageQuery = graphql`
       }
     }
   }
-`
+`;
